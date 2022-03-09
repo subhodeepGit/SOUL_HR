@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include soul_hr *.css
+recursive-include soul_hr *.csv
+recursive-include soul_hr *.html
+recursive-include soul_hr *.ico
+recursive-include soul_hr *.js
+recursive-include soul_hr *.json
+recursive-include soul_hr *.md
+recursive-include soul_hr *.png
+recursive-include soul_hr *.py
+recursive-include soul_hr *.svg
+recursive-include soul_hr *.txt
+recursive-exclude soul_hr *.pyc
