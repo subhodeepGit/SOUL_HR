@@ -95,14 +95,16 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Interview":{
+		"before_save":"soul_hr.soul_hr.Doctype.interview.before_save"
+	},
+	"Job Offer":{
+		"before_save":"soul_hr.soul_hr.Doctype.job_offer.before_save"
+	}
 
+}
+# /opt/bench/frappe-bench/apps/soul_hr/soul_hr/soul_hr/notification/custom_notification.py
 # Scheduled Tasks
 # ---------------
 
