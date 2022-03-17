@@ -2,18 +2,18 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Project and Tasks Report', {
-	refresh: function(frm) {
+	// refresh: function(frm) {
 
 
-	frm.set_query("tasks","estimation", function(_doc, cdt, cdn) {
-		var d = locals[cdt][cdn];
-		return {
-			filters: {
-				"project":d.project
-			}
-		};
-	});
-	}
+	// frm.set_query("tasks","estimation", function(_doc, cdt, cdn) {
+	// 	var d = locals[cdt][cdn];
+	// 	return {
+	// 		filters: {
+	// 			"project":d.project
+	// 		}
+	// 	};
+	// });
+	// }
 });
 frappe.ui.form.on("Project and Tasks Estimation Table", "mon", function(frm, cdt, cdn) {
     var ed_details = frm.doc.estimation;
