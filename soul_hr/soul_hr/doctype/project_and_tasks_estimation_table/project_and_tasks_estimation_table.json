@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-03-17 12:12:49.864754",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "tasks",
+  "task_description",
+  "mon",
+  "tue",
+  "wed",
+  "thu",
+  "fri",
+  "sat",
+  "sun",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "label": "Task Description"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "mon",
+   "fieldtype": "Float",
+   "label": "MON"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "tue",
+   "fieldtype": "Float",
+   "label": "TUE"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "wed",
+   "fieldtype": "Float",
+   "label": "WED"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "thu",
+   "fieldtype": "Float",
+   "label": "THU"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "fri",
+   "fieldtype": "Float",
+   "label": "FRI"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "sat",
+   "fieldtype": "Float",
+   "label": "SAT"
+  },
+  {
+   "default": "0.00",
+   "fieldname": "sun",
+   "fieldtype": "Float",
+   "label": "SUN"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Float",
+   "label": "Total",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-17 13:21:11.141951",
+ "modified_by": "Administrator",
+ "module": "Soul Hr",
+ "name": "Project and Tasks Estimation Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
