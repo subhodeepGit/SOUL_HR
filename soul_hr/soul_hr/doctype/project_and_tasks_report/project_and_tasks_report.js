@@ -184,8 +184,8 @@ frappe.ui.form.on('Project and Tasks Estimation Table', {
 	var total = 0;
 	let a= parseInt(total)
 	frm.doc.estimation.forEach(function(d)  { a = a+ d.sun; });
-	frm.set_value("monday", a);
-	refresh_field("monday");
+	frm.set_value("sunday", a);
+	refresh_field("sunday");
 	},
 	estimation_remove:function(frm, cdt, cdn){
 	var d = locals[cdt][cdn];

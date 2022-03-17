@@ -30,7 +30,8 @@
   "column_break_21",
   "saturday",
   "column_break_23",
-  "sunday"
+  "sunday",
+  "amended_from"
  ],
  "fields": [
   {
@@ -47,8 +48,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Employee Name",
-   "read_only": 1,
-   "unique": 1
+   "read_only": 1
   },
   {
    "fetch_from": "employee.employee_number",
@@ -168,11 +168,21 @@
   {
    "fieldname": "column_break_23",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project and Tasks Report",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2022-03-17 13:42:11.147655",
+ "modified": "2022-03-17 16:36:32.450887",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Project and Tasks Report",
