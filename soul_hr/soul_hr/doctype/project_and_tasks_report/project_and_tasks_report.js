@@ -1,19 +1,49 @@
 // Copyright (c) 2022, SOUL and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Project and Tasks Report', {
-	// refresh: function(frm) {
+frappe.ui.form.on('Project and Tasks Report',{
+	before_load: function(frm) {
+				frappe.call({
+					method: "soul_hr.soul_hr.doctype.project_and_tasks_report.project_and_tasks_report.get_employee",
+					
+					args: {"user": frappe.session.user },
+					
+					// args: {
+					// 	semester: frm.doc.program,
+					// },
+					callback: function(r) { 
+						if(r.message) {
+							var d=r.message
+							frm.set_value("employee", d['name'])
+						}
 
+					}
+					
+				});
+			},
+					
+	// onload: function(frm) {
+	// 	frappe.call({
+	// 		method: "soul_hr.soul_hr.doctype.project_and_tasks_report.project_and_tasks_report.get_employees",
+			
+	// 		args: {"user": frappe.session.user },
+			
+	// 		// args: {
+	// 		// 	semester: frm.doc.program,
+	// 		// },
+	// 		callback: function(r) { 
+	// 			if(r.message) {
+	// 				var d=r.message
+	// 				frm.set_value("employee", d['name'])
+	// 			}
 
-	// frm.set_query("tasks","estimation", function(_doc, cdt, cdn) {
-	// 	var d = locals[cdt][cdn];
-	// 	return {
-	// 		filters: {
-	// 			"project":d.project
 	// 		}
-	// 	};
-	// });
-	// }
+			
+	// 	});
+	// }		
+	
+	// /opt/bench/frappe-bench/apps/soul_hr/soul_hr/soul_hr/doctype/project_and_tasks_report/project_and_tasks_report.js
+
 });
 frappe.ui.form.on("Project and Tasks Estimation Table", "mon", function(frm, cdt, cdn) {
     var ed_details = frm.doc.estimation;
@@ -70,129 +100,129 @@ frappe.ui.form.on("Project and Tasks Estimation Table", "sun", function(frm, cdt
 
 
 
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	mon:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d)  { a = a+ d.mon; });
-	frm.set_value("monday", a);
-	refresh_field("monday");
-	},
-	estimation_remove:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d) { a += d.mon; });
-	frm.set_value("monday", a);
-	refresh_field("monday");
-		}
-	});
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	tue:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d)  { a = a+ d.tue; });
-	frm.set_value("tuesday", a);
-	refresh_field("tuesday");
-	},
-	estimation_remove:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d) { a += d.tue; });
-	frm.set_value("tuesday", a);
-	refresh_field("tuesday");
-		}
-	});
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	wed:function(frm, cdt, cdn){
-		var d = locals[cdt][cdn];
-		var total = 0;
-		let a= parseInt(total)
-		frm.doc.estimation.forEach(function(d)  { a = a+ d.wed; });
-		frm.set_value("wednesday", a);
-		refresh_field("wednesday");
-		},
-		estimation_remove:function(frm, cdt, cdn){
-		var d = locals[cdt][cdn];
-		var total = 0;
-		let a= parseInt(total)
-		frm.doc.estimation.forEach(function(d) { a += d.wed; });
-		frm.set_value("wednesday", a);
-		refresh_field("wednesday");
-			}
-		});
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	thu:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d)  { a = a+ d.thu; });
-	frm.set_value("thursday", a);
-	refresh_field("thursday");
-	},
-	estimation_remove:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d) { a += d.thu; });
-	frm.set_value("thursday", a);
-	refresh_field("thursday");
-		}
-	});
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	fri:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d)  { a = a+ d.fri; });
-	frm.set_value("friday", a);
-	refresh_field("friday");
-	},
-	estimation_remove:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d) { a += d.fri; });
-	frm.set_value("friday", a);
-	refresh_field("friday");
-		}
-	});
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	sat:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d)  { a = a+ d.sat; });
-	frm.set_value("saturday", a);
-	refresh_field("saturday");
-	},
-	estimation_remove:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d) { a += d.sat; });
-	frm.set_value("saturday", a);
-	refresh_field("saturday");
-		}
-	});
-frappe.ui.form.on('Project and Tasks Estimation Table', {
-	sun:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d)  { a = a+ d.sun; });
-	frm.set_value("sunday", a);
-	refresh_field("sunday");
-	},
-	estimation_remove:function(frm, cdt, cdn){
-	var d = locals[cdt][cdn];
-	var total = 0;
-	let a= parseInt(total)
-	frm.doc.estimation.forEach(function(d) { a += d.sun; });
-	frm.set_value("sunday", a);
-	refresh_field("sunday");
-		}
-	});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	mon:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d)  { a = a+ d.mon; });
+// 	frm.set_value("monday", a);
+// 	refresh_field("monday");
+// 	},
+// 	estimation_remove:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d) { a += d.mon; });
+// 	frm.set_value("monday", a);
+// 	refresh_field("monday");
+// 		}
+// 	});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	tue:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d)  { a = a+ d.tue; });
+// 	frm.set_value("tuesday", a);
+// 	refresh_field("tuesday");
+// 	},
+// 	estimation_remove:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d) { a += d.tue; });
+// 	frm.set_value("tuesday", a);
+// 	refresh_field("tuesday");
+// 		}
+// 	});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	wed:function(frm, cdt, cdn){
+// 		var d = locals[cdt][cdn];
+// 		var total = 0;
+// 		let a= parseInt(total)
+// 		frm.doc.estimation.forEach(function(d)  { a = a+ d.wed; });
+// 		frm.set_value("wednesday", a);
+// 		refresh_field("wednesday");
+// 		},
+// 		estimation_remove:function(frm, cdt, cdn){
+// 		var d = locals[cdt][cdn];
+// 		var total = 0;
+// 		let a= parseInt(total)
+// 		frm.doc.estimation.forEach(function(d) { a += d.wed; });
+// 		frm.set_value("wednesday", a);
+// 		refresh_field("wednesday");
+// 			}
+// 		});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	thu:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d)  { a = a+ d.thu; });
+// 	frm.set_value("thursday", a);
+// 	refresh_field("thursday");
+// 	},
+// 	estimation_remove:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d) { a += d.thu; });
+// 	frm.set_value("thursday", a);
+// 	refresh_field("thursday");
+// 		}
+// 	});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	fri:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d)  { a = a+ d.fri; });
+// 	frm.set_value("friday", a);
+// 	refresh_field("friday");
+// 	},
+// 	estimation_remove:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d) { a += d.fri; });
+// 	frm.set_value("friday", a);
+// 	refresh_field("friday");
+// 		}
+// 	});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	sat:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d)  { a = a+ d.sat; });
+// 	frm.set_value("saturday", a);
+// 	refresh_field("saturday");
+// 	},
+// 	estimation_remove:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d) { a += d.sat; });
+// 	frm.set_value("saturday", a);
+// 	refresh_field("saturday");
+// 		}
+// 	});
+// frappe.ui.form.on('Project and Tasks Estimation Table', {
+// 	sun:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d)  { a = a+ d.sun; });
+// 	frm.set_value("sunday", a);
+// 	refresh_field("sunday");
+// 	},
+// 	estimation_remove:function(frm, cdt, cdn){
+// 	var d = locals[cdt][cdn];
+// 	var total = 0;
+// 	let a= parseInt(total)
+// 	frm.doc.estimation.forEach(function(d) { a += d.sun; });
+// 	frm.set_value("sunday", a);
+// 	refresh_field("sunday");
+// 		}
+// 	});

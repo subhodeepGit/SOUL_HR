@@ -31,6 +31,9 @@
   "saturday",
   "column_break_23",
   "sunday",
+  "column_break_25",
+  "column_break_26",
+  "total",
   "amended_from"
  ],
  "fields": [
@@ -85,7 +88,8 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Report for Week Starting"
+   "label": "Report for Week Starting",
+   "reqd": 1
   },
   {
    "fieldname": "employee_details__week_starting_section",
@@ -177,12 +181,26 @@
    "options": "Project and Tasks Report",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "label": "Total",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-03-17 16:36:32.450887",
+ "modified": "2022-03-22 12:04:17.367411",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Project and Tasks Report",

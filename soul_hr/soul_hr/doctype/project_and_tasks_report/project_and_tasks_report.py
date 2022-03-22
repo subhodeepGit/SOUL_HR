@@ -3,11 +3,35 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe.utils import flt
+# from soul_hr.soul_hr.doctype.user_permissions import add_user_permissions
 
+# /opt/bench/frappe-bench/apps/soul_hr/soul_hr/soul_hr/doctype/user_permissions.py
 class ProjectandTasksReport(Document):
 	def validate(self):
 		self.validate_years()
+		self.calculate_total()
 		# self.validate_child_date()
+
+	def calculate_total(self):
+		mon=tue=wed=thu=fri=sat=sun=0
+		for d in self.get("estimation"):
+
+			mon+=flt(d.mon)
+			tue+=flt(d.tue)
+			wed+=flt(d.wed)
+			thu+=flt(d.thu)
+			fri+=flt(d.fri)
+			sat+=flt(d.sat)
+			sun+=flt(d.sun)
+		self.monday=mon
+		self.tuesday=tue
+		self.wednesday=wed
+		self.thursday=thu
+		self.friday=fri
+		self.saturday=sat
+		self.sunday=sun
+		self.total=mon + tue + wed + thu + fri + sat + sun
 
 		
 	def validate_years(self):
@@ -18,5 +42,15 @@ class ProjectandTasksReport(Document):
 		})
 		if duplicateForm:
 			frappe.throw(("Employee has already filled the form for this Date."))
-
 	
+
+   
+
+@frappe.whitelist()
+def get_employee(user=None):
+	if user!="Administrator":
+		p = frappe.get_all("Employee",filters={"user_id":user})
+		p=p[0]
+	else:
+		p = frappe.get_all("Employee")
+	return p
