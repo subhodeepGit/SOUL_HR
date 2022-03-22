@@ -44,8 +44,6 @@ class ProjectandTasksReport(Document):
 			frappe.throw(("Employee has already filled the form for this Date."))
 	
 
-   
-
 @frappe.whitelist()
 def get_employee(user=None):
 	if user!="Administrator":
