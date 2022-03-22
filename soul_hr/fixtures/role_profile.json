@@ -1,0 +1,50 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2022-03-22 15:18:46.150923",
+  "name": "IT Director",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "IT Director",
+  "roles": [
+   {
+    "parent": "IT Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   },
+   {
+    "parent": "IT Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "IT Director"
+   },
+   {
+    "parent": "IT Director",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "System Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2022-03-22 15:20:56.403767",
+  "name": "Employee",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Employee",
+  "roles": [
+   {
+    "parent": "Employee",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ }
+]

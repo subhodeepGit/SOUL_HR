@@ -181,3 +181,20 @@ user_data_fields = [
 # 	"soul_hr.auth.validate"
 # ]
 
+after_migrate = [
+        'soul_hr.patches.migrate_patch.add_roles',
+        'soul_hr.patches.migrate_patch.set_custom_role_permission',
+]
+
+# fixtures = [
+# 	{"dt": "Custom DocPerm", "filters": [
+# 		[
+# 			"parent", "not in", [
+# 				"DocType"
+# 			]
+# 		]
+# 	]},
+#     {"dt": "Role"},
+#     {"dt": "Role Profile"},
+#     {"dt": "Module Profile"}
+# ]
