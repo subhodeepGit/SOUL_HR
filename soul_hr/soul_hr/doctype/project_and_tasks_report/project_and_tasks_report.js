@@ -71,14 +71,22 @@ frappe.ui.form.on("Project and Tasks Estimation Table", "tasks", function(frm, c
 });
 frappe.ui.form.on("Project and Tasks Estimation Table", "mon", function(frm, cdt, cdn) {
     var ed_details = frm.doc.estimation;
+
     for(var i in ed_details) {
+		if (ed_details[i].mon<0) {
+			ed_details[i].mon=("0");
+		}
         // if (ed_details[i].denominacion && ed_details[i].cantidad) {
         ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
     }
         cur_frm.refresh_field ("estimation"); });
 frappe.ui.form.on("Project and Tasks Estimation Table", "tue", function(frm, cdt, cdn) {
 	var ed_details = frm.doc.estimation;
+
 	for(var i in ed_details) {
+		if (ed_details[i].tue<0) {
+			ed_details[i].tue=("0");
+		}
 		// if (ed_details[i].denominacion && ed_details[i].cantidad) {
 		ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
 	}
@@ -86,40 +94,89 @@ frappe.ui.form.on("Project and Tasks Estimation Table", "tue", function(frm, cdt
 frappe.ui.form.on("Project and Tasks Estimation Table", "wed", function(frm, cdt, cdn) {
 	var ed_details = frm.doc.estimation;
 	for(var i in ed_details) {
+		for(var i in ed_details) {
+
+			if (ed_details[i].wed<0) {
+				ed_details[i].wed=("0");
+			}
 		// if (ed_details[i].denominacion && ed_details[i].cantidad) {
 		ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
 	}
-		cur_frm.refresh_field ("estimation"); });
+		cur_frm.refresh_field ("estimation"); }
+	});
 frappe.ui.form.on("Project and Tasks Estimation Table", "thu", function(frm, cdt, cdn) {
 	var ed_details = frm.doc.estimation;
 	for(var i in ed_details) {
+		for(var i in ed_details) {
+			if (ed_details[i].thu<0) {
+				ed_details[i].thu=("0");
+			}
 		// if (ed_details[i].denominacion && ed_details[i].cantidad) {
 		ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
 	}
-		cur_frm.refresh_field ("estimation"); });
+		cur_frm.refresh_field ("estimation");
+ }
+ });
 frappe.ui.form.on("Project and Tasks Estimation Table", "fri", function(frm, cdt, cdn) {
 	var ed_details = frm.doc.estimation;
 	for(var i in ed_details) {
+		for(var i in ed_details) {
+			if (ed_details[i].fri<0) {
+				ed_details[i].fri=("0");
+			}
 		// if (ed_details[i].denominacion && ed_details[i].cantidad) {
 		ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
 	}
-		cur_frm.refresh_field ("estimation"); });
+		cur_frm.refresh_field ("estimation"); 
+	}
+	});
+
 frappe.ui.form.on("Project and Tasks Estimation Table", "sat", function(frm, cdt, cdn) {
 	var ed_details = frm.doc.estimation;
 	for(var i in ed_details) {
+		if (ed_details[i].sat<0) {
+			ed_details[i].sat=("0");
+		}
 		// if (ed_details[i].denominacion && ed_details[i].cantidad) {
 		ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
 	}
 		cur_frm.refresh_field ("estimation"); });
 frappe.ui.form.on("Project and Tasks Estimation Table", "sun", function(frm, cdt, cdn) {
 	var ed_details = frm.doc.estimation;
+
 	for(var i in ed_details) {
+		if (ed_details[i].sun<0) {
+			ed_details[i].sun=("0");
+		}
 		// if (ed_details[i].denominacion && ed_details[i].cantidad) {
 		ed_details[i].total=ed_details[i].mon + ed_details[i].tue + ed_details[i].wed + ed_details[i].thu + ed_details[i].fri + ed_details[i].sat + ed_details[i].sun;
 	}
-		cur_frm.refresh_field ("estimation"); });
+		cur_frm.refresh_field ("estimation"); 
+	});
 		
+// frappe.ui.form.on("Project and Tasks Estimation Table", "level", function(frm, cdt, cdn) {
 
+// 	var ed_details = frm.doc.books_chapters_in_books_etc;
+// 	//var total = 0;
+// 	for(var i in ed_details) {
+				
+// 	if (ed_details[i].level=="International") {
+// 		ed_details[i].level_score=("12");
+// 	}
+// 	else if (ed_details[i].level=="National") {
+// 		ed_details[i].level_score=("10");
+// 	}
+// 	else {
+// 		frappe.throw("Wrong Entry")
+// 	}	 
+		
+// }
+// 		cur_frm.refresh_field ("books_chapters_in_books_etc");
+	
+		
+// 		//alert(ed_details[i].percent);
+	
+// 	});	
 
 
 
