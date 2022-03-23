@@ -31,11 +31,42 @@ class ProjectandTasksReport(Document):
 			fri+=flt(d.fri)
 			sat+=flt(d.sat)
 			sun+=flt(d.sun)
+		error=[]
 		self.monday=mon
+		if self.monday>24:
+			error.append("Monday")
+			# frappe.throw("Yor have worked less than 8 hrs on Monday")
 		self.tuesday=tue
+		if self.tuesday>24:
+			error.append("Tuesday")
+			# frappe.throw("Yor have worked less than 8 hrs on Tuesday")
 		self.wednesday=wed
+		if self.wednesday>24:
+			error.append("Wednesday")
+			# frappe.throw("Yor have worked less than 8 hrs on Wednesday")
 		self.thursday=thu
+		if self.thursday>24:
+			error.append("Thursday")
+			# frappe.throw("Yor have worked less than 8 hrs on Thursday")
 		self.friday=fri
+		if self.friday>24:
+			error.append("Friday")
+		a=""
+		len_of_list=len(error)
+		b=1
+		for t in error:
+			if b==len_of_list and b!=1:
+				a=a+" and "+t+"."
+			elif b==len_of_list and b==1:
+				a=t+" ."
+			elif b==1:
+				b=b+1
+				a=t
+			else:
+				b=b+1
+				a=a+", "+t	
+		if len_of_list !=0:
+			frappe.throw("Yor have worked more than 24 hrs on "+a)	
 		self.saturday=sat
 		self.sunday=sun
 		self.total=mon + tue + wed + thu + fri + sat + sun
