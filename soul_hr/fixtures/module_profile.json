@@ -1,0 +1,530 @@
+[
+ {
+  "block_modules": [
+   {
+    "module": "Core",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Workflow",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Custom",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Desk",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Printing",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Data Migration",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Automation",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Accounts",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Buying",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Selling",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Stock",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Utilities",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Portal",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Regional",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Restaurant",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Hotels",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Quality Management",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Loan Management",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Telephony",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Agriculture",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Education",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Non Profit",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "E-commerce",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Payroll",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Communication",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Hub Node",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "ERPNext Integrations",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Healthcare",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Maintenance",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Assets",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Support",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Manufacturing",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Setup",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Projects",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Event Streaming",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Social",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Contacts",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Integrations",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Geo",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Email",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Website",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "CRM",
+    "parent": "IT Director",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Module Profile",
+  "modified": "2022-03-22 15:19:43.232407",
+  "module_profile_name": "IT Director",
+  "name": "IT Director",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "block_modules": [
+   {
+    "module": "Selling",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Buying",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Accounts",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Automation",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Data Migration",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Desk",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Custom",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Workflow",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Core",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Printing",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Stock",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Utilities",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Portal",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Regional",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Restaurant",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Hotels",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Quality Management",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Loan Management",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Agriculture",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Non Profit",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Telephony",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "E-commerce",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Education",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Payroll",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Communication",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Hub Node",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "ERPNext Integrations",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Healthcare",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Maintenance",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Assets",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Support",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Manufacturing",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Setup",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Projects",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "CRM",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Event Streaming",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Contacts",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Social",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Integrations",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Geo",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Email",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   },
+   {
+    "module": "Website",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Module Profile",
+  "modified": "2022-03-22 15:20:26.235675",
+  "module_profile_name": "Employee",
+  "name": "Employee",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]
