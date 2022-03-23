@@ -4,9 +4,7 @@
 import frappe
 from frappe.model.document import Document
 from frappe.utils import flt
-# from soul_hr.soul_hr.doctype.user_permissions import add_user_permissions
 
-# /opt/bench/frappe-bench/apps/soul_hr/soul_hr/soul_hr/doctype/user_permissions.py
 class ProjectandTasksReport(Document):
 	def validate(self):
 		self.validate_years()
@@ -45,10 +43,10 @@ class ProjectandTasksReport(Document):
 	
 
 @frappe.whitelist()
-def get_employee(user=None):
+def get_employees(user=None):
 	if user!="Administrator":
-		p = frappe.get_all("Employee",filters={"user_id":user})
+		p = frappe.db.get_all("Employee",filters={"user_id":user})
 		p=p[0]
 	else:
-		p = frappe.get_all("Employee")
+		p = frappe.db.get_all("Employee")
 	return p

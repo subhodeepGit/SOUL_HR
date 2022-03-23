@@ -4,13 +4,9 @@
 frappe.ui.form.on('Project and Tasks Report',{
 	before_load: function(frm) {
 				frappe.call({
-					method: "soul_hr.soul_hr.doctype.project_and_tasks_report.project_and_tasks_report.get_employee",
+					method: "soul_hr.soul_hr.doctype.project_and_tasks_report.project_and_tasks_report.get_employees",
 					
 					args: {"user": frappe.session.user },
-					
-					// args: {
-					// 	semester: frm.doc.program,
-					// },
 					callback: function(r) { 
 						if(r.message) {
 							var d=r.message
@@ -21,7 +17,19 @@ frappe.ui.form.on('Project and Tasks Report',{
 					
 				});
 			},
-					
+		refresh: function(frm) {	
+			frm.set_query("tasks","estimation", function(_doc, cdt, cdn) {
+				var d = locals[cdt][cdn];
+				return {
+					filters: {
+						"project":d.project
+					}
+				};
+			});
+		},	
+
+
+				
 	// onload: function(frm) {
 	// 	frappe.call({
 	// 		method: "soul_hr.soul_hr.doctype.project_and_tasks_report.project_and_tasks_report.get_employees",
@@ -44,6 +52,22 @@ frappe.ui.form.on('Project and Tasks Report',{
 	
 	// /opt/bench/frappe-bench/apps/soul_hr/soul_hr/soul_hr/doctype/project_and_tasks_report/project_and_tasks_report.js
 
+});
+frappe.ui.form.on("Project and Tasks Estimation Table", "tasks", function(frm, cdt, cdn) {
+	var al_no = frm.doc.estimation;
+	var arr =[];
+	for(var i in al_no){
+		arr.push(al_no[i].tasks);
+	}
+	for (var j=0;j<arr.length-1;j++){
+		for(var k=j+1;k<arr.length;k++){
+			if(arr[j] == arr[k]){
+				// frappe.show_alert('Duplicate Allotment number')
+				// frappe.msgprint(arr[k])
+				frappe.msgprint("Duplicate entry "+arr[k])
+			}
+		}
+	}
 });
 frappe.ui.form.on("Project and Tasks Estimation Table", "mon", function(frm, cdt, cdn) {
     var ed_details = frm.doc.estimation;
@@ -226,3 +250,11 @@ frappe.ui.form.on("Project and Tasks Estimation Table", "sun", function(frm, cdt
 // 	refresh_field("sunday");
 // 		}
 // 	});
+
+
+
+
+
+
+
+
