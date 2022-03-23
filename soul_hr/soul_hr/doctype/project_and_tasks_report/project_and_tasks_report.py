@@ -10,15 +10,35 @@ from frappe.utils.data import getdate
 
 class ProjectandTasksReport(Document):
 	def validate(self):
-		self.validate_years()
-		self.calculate_total()
+		self.calculate_totals()
+		# self.validate_years()
 		self.validate_dates()
 		duplicate_row_validation(self, "estimation", ['project','tasks'])
-
+	def on_submit(self):
+		self.calculate_total()
 	def validate_dates(self):
 			if self.report_for_week_starting and getdate(self.report_for_week_starting) >= getdate():
 				frappe.throw(frappe._("Submission Date cannot be greater than today's date."))
 
+	def calculate_totals(self):
+		mon=tue=wed=thu=fri=sat=sun=0
+		for d in self.get("estimation"):
+
+			mon+=flt(d.mon)
+			tue+=flt(d.tue)
+			wed+=flt(d.wed)
+			thu+=flt(d.thu)
+			fri+=flt(d.fri)
+			sat+=flt(d.sat)
+			sun+=flt(d.sun)
+		self.monday=mon
+		self.tuesday=tue
+		self.wednesday=wed
+		self.thursday=thu
+		self.friday=fri
+		self.saturday=sat
+		self.sunday=sun
+		self.total=mon + tue + wed + thu + fri + sat + sun
 	def calculate_total(self):
 		mon=tue=wed=thu=fri=sat=sun=0
 		for d in self.get("estimation"):
