@@ -2,6 +2,132 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
+  "modified": "2022-03-21 17:55:14.446059",
+  "name": "Purchase User",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Purchase User",
+  "roles": [
+   {
+    "parent": "Purchase User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock User"
+   },
+   {
+    "parent": "Purchase User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales User"
+   },
+   {
+    "parent": "Purchase User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing User"
+   },
+   {
+    "parent": "Purchase User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maintenance User"
+   },
+   {
+    "parent": "Purchase User",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2022-03-21 17:58:01.718691",
+  "name": "Purchase Manager",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Purchase Manager",
+  "roles": [
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Manufacturing Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Quality Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Stock Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Item Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Maintenance Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Manager"
+   },
+   {
+    "parent": "Purchase Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "System Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2022-03-21 17:58:48.148739",
+  "name": "Master Manager",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Master Manager",
+  "roles": [
+   {
+    "parent": "Master Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Purchase Master Manager"
+   },
+   {
+    "parent": "Master Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Sales Master Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
   "modified": "2022-03-22 15:18:46.150923",
   "name": "IT Director",
   "parent": null,
@@ -41,6 +167,54 @@
   "roles": [
    {
     "parent": "Employee",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Employee"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2022-08-11 18:11:46.543775",
+  "name": "HR Manager",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "HR Manager",
+  "roles": [
+   {
+    "parent": "HR Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "HR Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2022-08-11 18:12:24.622363",
+  "name": "Approver",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "role_profile": "Approver",
+  "roles": [
+   {
+    "parent": "Approver",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Expense Approver"
+   },
+   {
+    "parent": "Approver",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Leave Approver"
+   },
+   {
+    "parent": "Approver",
     "parentfield": "roles",
     "parenttype": "Role Profile",
     "role": "Employee"
