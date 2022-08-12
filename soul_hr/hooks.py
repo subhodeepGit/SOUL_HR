@@ -101,7 +101,12 @@ doc_events = {
 	},
 	"Job Offer":{
 		"before_save":"soul_hr.soul_hr.Doctype.job_offer.before_save"
-	}
+	},
+	"Leave Application":{
+        "on_update":"soul_hr.soul_hr.validations.leave_application.on_update",
+        "on_submit":"soul_hr.soul_hr.validations.leave_application.on_submit",
+        "on_cancel":"soul_hr.soul_hr.validations.leave_application.on_cancel"
+    }
 
 }
 # /opt/bench/frappe-bench/apps/soul_hr/soul_hr/soul_hr/notification/custom_notification.py
