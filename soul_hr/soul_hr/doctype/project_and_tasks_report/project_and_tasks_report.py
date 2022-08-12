@@ -83,23 +83,23 @@ class ProjectandTasksReport(Document):
 			sun+=flt(d.sun)
 		error=[]
 		self.monday=mon
-		if self.monday<8:
+		if self.monday<0:
 			error.append("Monday")
 			# frappe.throw("Yor have worked less than 8 hrs on Monday")
 		self.tuesday=tue
-		if self.tuesday<8:
+		if self.tuesday<0:
 			error.append("Tuesday")
 			# frappe.throw("Yor have worked less than 8 hrs on Tuesday")
 		self.wednesday=wed
-		if self.wednesday<8:
+		if self.wednesday<0:
 			error.append("Wednesday")
 			# frappe.throw("Yor have worked less than 8 hrs on Wednesday")
 		self.thursday=thu
-		if self.thursday<8:
+		if self.thursday<0:
 			error.append("Thursday")
 			# frappe.throw("Yor have worked less than 8 hrs on Thursday")
 		self.friday=fri
-		if self.friday<8:
+		if self.friday<0:
 			error.append("Friday")
 		# 	frappe.throw("Yor have worked less than 8 hrs on Friday")	
 		# error=["Monday","Tuesday","sat"]
@@ -118,7 +118,7 @@ class ProjectandTasksReport(Document):
 				b=b+1
 				a=a+", "+t	
 		if len_of_list !=0:
-			frappe.throw("Yor have worked less than 8 hrs on "+a)	
+			frappe.throw("Yor have worked less than 0 hrs on "+a)	
 
 		self.saturday=sat
 		self.sunday=sun
