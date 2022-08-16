@@ -16,6 +16,9 @@ class ProjectandTasksReport(Document):
 		duplicate_row_validation(self, "estimation", ['project','tasks'])
 	def on_submit(self):
 		self.calculate_total()
+	
+	def before_submit(self):
+			share_doc_with_approver(self, self.approver)
 	def validate_dates(self):
 			if self.report_for_week_starting and getdate(self.report_for_week_starting) >= getdate():
 				frappe.throw(frappe._("Submission Date cannot be greater than today's date."))
@@ -83,23 +86,23 @@ class ProjectandTasksReport(Document):
 			sun+=flt(d.sun)
 		error=[]
 		self.monday=mon
-		if self.monday<0:
+		if self.monday<1:
 			error.append("Monday")
 			# frappe.throw("Yor have worked less than 8 hrs on Monday")
 		self.tuesday=tue
-		if self.tuesday<0:
+		if self.tuesday<1:
 			error.append("Tuesday")
 			# frappe.throw("Yor have worked less than 8 hrs on Tuesday")
 		self.wednesday=wed
-		if self.wednesday<0:
+		if self.wednesday<1:
 			error.append("Wednesday")
 			# frappe.throw("Yor have worked less than 8 hrs on Wednesday")
 		self.thursday=thu
-		if self.thursday<0:
+		if self.thursday<1:
 			error.append("Thursday")
 			# frappe.throw("Yor have worked less than 8 hrs on Thursday")
 		self.friday=fri
-		if self.friday<0:
+		if self.friday<1:
 			error.append("Friday")
 		# 	frappe.throw("Yor have worked less than 8 hrs on Friday")	
 		# error=["Monday","Tuesday","sat"]
@@ -185,3 +188,11 @@ def duplicate_row_validation(doc,table_field_name,comapre_fields):
 # 		else:
 # 			pass
 ################################################
+@frappe.whitelist()
+def share_doc_with_approver(doc, user):
+	if not frappe.has_permission(doc=doc, ptype="submit", user=user):
+		frappe.share.add(doc.doctype, doc.name, user, submit=1,
+			flags={"ignore_share_permission": True})
+
+		frappe.msgprint(("Shared with the user {0}").format(
+			user, frappe.bold("submit"), alert=True))

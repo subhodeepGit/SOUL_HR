@@ -12,6 +12,7 @@
   "employee_name",
   "report_for_week_starting",
   "column_break_3",
+  "approver",
   "phone",
   "email",
   "identification",
@@ -195,12 +196,20 @@
    "fieldtype": "Data",
    "label": "Total",
    "read_only": 1
+  },
+  {
+   "fetch_from": "employee.leave_approver",
+   "fieldname": "approver",
+   "fieldtype": "Data",
+   "label": "Approver",
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-03-22 12:04:17.367411",
+ "modified": "2022-08-16 18:06:45.602164",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Project and Tasks Report",
