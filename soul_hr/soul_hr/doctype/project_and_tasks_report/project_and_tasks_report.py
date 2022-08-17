@@ -195,5 +195,5 @@ def share_doc_with_approver(doc, user):
 		frappe.share.add(doc.doctype, doc.name, user, submit=1,
 			flags={"ignore_share_permission": True})
 
-		frappe.msgprint(("Shared with the user {0}").format(
+		frappe.msgprint(("Shared with the approver {0}").format(
 			user, frappe.bold("submit"), alert=True))
