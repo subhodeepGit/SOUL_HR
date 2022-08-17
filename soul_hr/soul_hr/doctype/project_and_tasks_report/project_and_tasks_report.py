@@ -197,3 +197,13 @@ def share_doc_with_approver(doc, user):
 
 		frappe.msgprint(("Shared with the approver {0}").format(
 			user, frappe.bold("submit"), alert=True))
+		
+	doc_before_save = doc.get_doc_before_save()
+	if doc_before_save:
+		approvers = {
+			"Leave Application": "leave_approver",
+			"Expense Claim": "expense_approver",
+			"Shift Request": "approver"
+		}
+
+		approver = approvers.get(doc.doctype)
