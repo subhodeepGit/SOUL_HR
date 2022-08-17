@@ -122,7 +122,7 @@ class ProjectandTasksReport(Document):
 				b=b+1
 				a=a+", "+t	
 		if len_of_list !=0:
-			frappe.throw("Yor have worked less than 0 hrs on "+a)	
+			frappe.throw("Yor have worked less than 1 hrs on "+a)	
 
 		self.saturday=sat
 		self.sunday=sun
