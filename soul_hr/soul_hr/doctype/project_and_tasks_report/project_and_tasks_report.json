@@ -34,7 +34,9 @@
   "sunday",
   "column_break_25",
   "column_break_26",
-  "total"
+  "total",
+  "section_break_29",
+  "amended_from"
  ],
  "fields": [
   {
@@ -194,12 +196,40 @@
    "label": "Approver",
    "read_only": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project and Tasks Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project and Tasks Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-08-17 12:54:54.824327",
+ "modified": "2022-08-17 15:50:38.481641",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Project and Tasks Report",
