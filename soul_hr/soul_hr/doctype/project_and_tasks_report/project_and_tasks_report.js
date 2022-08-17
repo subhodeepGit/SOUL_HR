@@ -2,7 +2,8 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Project and Tasks Report',{
-	before_load: function(frm) {
+	// before_load: function(frm) {
+	onload: function(frm) {
 				frappe.call({
 					method: "soul_hr.soul_hr.doctype.project_and_tasks_report.project_and_tasks_report.get_employees",
 					
