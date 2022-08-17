@@ -16,9 +16,10 @@ class ProjectandTasksReport(Document):
 		duplicate_row_validation(self, "estimation", ['project','tasks'])
 	def on_submit(self):
 		self.calculate_total()
+		share_doc_with_approver(self, self.approver)
 	
-	def before_submit(self):
-			share_doc_with_approver(self, self.approver)
+	# def before_submit(self):
+	# 		share_doc_with_approver(self, self.approver)
 	def validate_dates(self):
 			if self.report_for_week_starting and getdate(self.report_for_week_starting) >= getdate():
 				frappe.throw(frappe._("Submission Date cannot be greater than today's date."))
