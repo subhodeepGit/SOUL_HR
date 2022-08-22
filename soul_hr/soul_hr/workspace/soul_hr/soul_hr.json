@@ -203,7 +203,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-11 18:44:55.291673",
+ "modified": "2022-08-22 12:11:00.303279",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "SOUL HR",
@@ -220,8 +220,10 @@
   },
   {
    "doc_view": "List",
+   "format": "{} Active",
    "label": "Employee",
    "link_to": "Employee",
+   "stats_filter": "{\"status\":\"Active\"}",
    "type": "DocType"
   },
   {
@@ -231,9 +233,12 @@
    "type": "DocType"
   },
   {
+   "color": "",
    "doc_view": "List",
+   "format": "{} Open",
    "label": "Leave Application",
    "link_to": "Leave Application",
+   "stats_filter": "{\"status\":\"Open\"}",
    "type": "DocType"
   }
  ]
