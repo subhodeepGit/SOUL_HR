@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2022-08-22 12:37:06.226718",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Leave Application",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Leave Application\",\"status\",\"=\",\"Cancelled\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Cancelled Leave Applications",
+ "modified": "2022-08-22 12:38:31.103131",
+ "modified_by": "Administrator",
+ "module": "Soul Hr",
+ "name": "Cancelled Leave Applications",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Yearly",
+ "type": "Document Type"
+}

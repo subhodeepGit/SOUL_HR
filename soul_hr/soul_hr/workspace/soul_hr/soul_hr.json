@@ -203,7 +203,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-22 12:11:00.303279",
+ "modified": "2022-08-22 12:41:06.266511",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "SOUL HR",
@@ -215,7 +215,7 @@
   {
    "doc_view": "",
    "label": "Dashboard",
-   "link_to": "Human Resource",
+   "link_to": "Soul Human Resource",
    "type": "Dashboard"
   },
   {
