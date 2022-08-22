@@ -22,7 +22,15 @@ def on_update(self, method):
 
 def validate(self,method):
 	hr(self)
+	
 def on_submit(self, method):
+	if frappe.db.get_single_value("HR Settings", "send_leave_notification"):
+			notify_employee(self)
+			notify_leave_approver_hr(self)
+
+def on_cancel(self, method):
+	self.create_leave_ledger_entry(submit=False)
+	# notify leave applier about cancellation
 	if frappe.db.get_single_value("HR Settings", "send_leave_notification"):
 			notify_employee(self)
 			notify_leave_approver_hr(self)
