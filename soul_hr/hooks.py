@@ -104,7 +104,8 @@ doc_events = {
 	},
 	"Leave Application":{
         "on_update":"soul_hr.soul_hr.validations.leave_application.on_update",
-        "on_submit":"soul_hr.soul_hr.validations.leave_application.on_submit"
+        "on_submit":"soul_hr.soul_hr.validations.leave_application.on_submit",
+		"validate":"soul_hr.soul_hr.validations.leave_application.validate"
     }
 
 }
