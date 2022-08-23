@@ -11,13 +11,13 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Approved Leave Applications",
- "modified": "2022-08-22 12:38:54.139052",
+ "modified": "2022-08-23 13:20:43.575510",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Approved Leave Applications",
  "owner": "Administrator",
  "report_function": "Sum",
  "show_percentage_stats": 1,
- "stats_time_interval": "Yearly",
+ "stats_time_interval": "Weekly",
  "type": "Document Type"
 }
