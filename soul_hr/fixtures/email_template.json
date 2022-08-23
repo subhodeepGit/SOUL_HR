@@ -2,12 +2,12 @@
  {
   "docstatus": 0,
   "doctype": "Email Template",
-  "modified": "2022-08-22 16:53:58.562328",
+  "modified": "2022-08-23 16:37:13.486262",
   "name": "Leave Approval Notification",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "response": "<div class=\"ql-editor read-mode\"><h1>Leave Application Notification</h1><h3>Details:</h3><table class=\"table table-bordered\"><tbody><tr><td data-row=\"1\">Employee</td><td data-row=\"1\">{{employee_name}}</td></tr><tr><td data-row=\"2\">Leave Type</td><td data-row=\"2\">{{leave_type}}</td></tr><tr><td data-row=\"3\">From Date</td><td data-row=\"3\">{{from_date}}</td></tr><tr><td data-row=\"4\">To Date</td><td data-row=\"4\">{{to_date}}</td></tr><tr><td data-row=\"5\">Status</td><td data-row=\"5\">{{status}}</td></tr></tbody></table><p>Website Link : <span style=\"background-color: rgb(255, 255, 255); color: rgb(29, 28, 29);\">{{frappe.get_url()}}</span></p></div>",
+  "response": "<div class=\"ql-editor read-mode\"><h1>Leave Application Notification</h1><h3>Details:</h3><table class=\"table table-bordered\"><tbody><tr><td data-row=\"1\">Employee</td><td data-row=\"1\">{{employee_name}}</td></tr><tr><td data-row=\"2\">Leave Type</td><td data-row=\"2\">{{leave_type}}</td></tr><tr><td data-row=\"3\">From Date</td><td data-row=\"3\"><span style=\"background-color: rgb(248, 248, 248); color: rgb(67, 67, 67);\">{{ frappe.format_date(from_date, \"dd-MM-yyyy\") }}</span></td></tr><tr><td data-row=\"4\">To Date</td><td data-row=\"4\"><span style=\"background-color: rgb(248, 248, 248); color: rgb(67, 67, 67);\">{{ frappe.format_date(to_date, \"dd-MM-yyyy\") }}</span></td></tr><tr><td data-row=\"5\">Status</td><td data-row=\"5\">{{status}}</td></tr></tbody></table><p>Website Link : <span style=\"background-color: rgb(255, 255, 255); color: rgb(29, 28, 29);\">{{frappe.get_url()}}</span></p></div>",
   "response_html": null,
   "subject": "Leave Approval Notification",
   "use_html": 0
@@ -15,12 +15,12 @@
  {
   "docstatus": 0,
   "doctype": "Email Template",
-  "modified": "2022-08-22 16:54:11.460096",
+  "modified": "2022-08-23 16:36:11.109920",
   "name": "Leave Status Notification",
   "parent": null,
   "parentfield": null,
   "parenttype": null,
-  "response": "<div class=\"ql-editor read-mode\"><h1>Leave Application Notification</h1><h3>Details:</h3><table class=\"table table-bordered\"><tbody><tr><td data-row=\"1\">Employee</td><td data-row=\"1\">{{employee_name}}</td></tr><tr><td data-row=\"2\">Leave Type</td><td data-row=\"2\">{{leave_type}}</td></tr><tr><td data-row=\"3\">From Date</td><td data-row=\"3\">{{from_date}}</td></tr><tr><td data-row=\"4\">To Date</td><td data-row=\"4\">{{to_date}}</td></tr><tr><td data-row=\"5\">Status</td><td data-row=\"5\">{{status}}</td></tr></tbody></table><p>Website Link : <span style=\"background-color: rgb(255, 255, 255); color: rgb(29, 28, 29);\">{{frappe.get_url()}}</span></p></div>",
+  "response": "<div class=\"ql-editor read-mode\"><h1>Leave Application Notification</h1><h3>Details:</h3><table class=\"table table-bordered\"><tbody><tr><td data-row=\"1\">Employee</td><td data-row=\"1\">{{employee_name}}</td></tr><tr><td data-row=\"2\">Leave Type</td><td data-row=\"2\">{{leave_type}}</td></tr><tr><td data-row=\"3\">From Date</td><td data-row=\"3\"><span style=\"background-color: rgb(248, 248, 248); color: rgb(67, 67, 67);\">{{ frappe.format_date(from_date, \"dd-MM-yyyy\") }}</span></td></tr><tr><td data-row=\"4\">To Date</td><td data-row=\"4\"><span style=\"background-color: rgb(248, 248, 248); color: rgb(67, 67, 67);\">{{ frappe.format_date(to_date, \"dd-MM-yyyy\") }}</span></td></tr><tr><td data-row=\"5\">Status</td><td data-row=\"5\">{{status}}</td></tr></tbody></table><p>Website Link : <span style=\"color: rgb(29, 28, 29); background-color: rgb(255, 255, 255);\">{{frappe.get_url()}}</span></p></div>",
   "response_html": null,
   "subject": "Leave Status Notification",
   "use_html": 0
