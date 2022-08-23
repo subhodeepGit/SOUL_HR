@@ -75,6 +75,39 @@ def employee_creation(doc):
 
     send_mail(frappe.db.get_value("Employee",doc.get('employee'),"personal_email"),sub,msg)
 
+def project_task(doc):
+    msg="""<p><b>Project and Task Report is Submitted Sucessfull</b></p><br>"""
+    msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
+    msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"email")
+    send_mail(recipients,'Project and Task Report',msg)
+
+def project_and_task(doc):
+    msg="""<p><b>Project and Task Report is Submitted Sucessfull</b></p><br>"""
+    msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
+    msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"approver")
+    send_mail(recipients,'Project and Task Report',msg)
+
+
+def project_task_cancelled(doc):
+    msg="""<p><b>Project and Task Report is Cancelled</b></p><br>"""
+    msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
+    msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"email")
+    send_mail(recipients,'Project and Task Report',msg)
+    
+def project_and_task_cancelled(doc):
+    msg="""<p><b>Project and Task Report is Cancelled</b></p><br>"""
+    msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
+    msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"approver")
+    send_mail(recipients,'Project and Task Report',msg)
+
 def send_mail(recipients,subject,message):
     if has_default_email_acc():
         frappe.sendmail(recipients=recipients,subject=subject,message = message)

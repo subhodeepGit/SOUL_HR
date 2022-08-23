@@ -6,6 +6,7 @@ from frappe.model.db_query import get_date_range
 from frappe.model.document import Document
 from frappe.utils import flt
 from frappe.utils.data import getdate
+from soul_hr.soul_hr.notification.custom_notification import project_task, project_and_task, project_task_cancelled, project_and_task_cancelled
 
 
 class ProjectandTasksReport(Document):
@@ -17,6 +18,11 @@ class ProjectandTasksReport(Document):
 	def on_submit(self):
 		self.calculate_total()
 		share_doc_with_approver(self, self.approver)
+		project_task(self)
+		project_and_task(self)
+	def on_cancel(self):
+		project_task_cancelled(self)
+		project_and_task_cancelled(self)
 	
 	# def before_submit(self):
 	# 		share_doc_with_approver(self, self.approver)
