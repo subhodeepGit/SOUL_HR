@@ -203,4 +203,5 @@ after_migrate = [
 #     {"dt": "Role"},
 #     {"dt": "Role Profile"},
 #     {"dt": "Module Profile"}
+# 	{"dt": "Email Template"}
 # ]
