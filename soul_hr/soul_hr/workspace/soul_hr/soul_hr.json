@@ -203,7 +203,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-22 12:41:06.266511",
+ "modified": "2022-08-23 12:50:14.004956",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "SOUL HR",
@@ -239,6 +239,12 @@
    "label": "Leave Application",
    "link_to": "Leave Application",
    "stats_filter": "{\"status\":\"Open\"}",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "HR Email Settings",
+   "link_to": "HR Email Settings",
    "type": "DocType"
   }
  ]
