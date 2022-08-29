@@ -75,23 +75,66 @@ def employee_creation(doc):
 
     send_mail(frappe.db.get_value("Employee",doc.get('employee'),"personal_email"),sub,msg)
 
+#employee on submit
 def project_task(doc):
-    msg="""<p><b>Project and Task Report is Submitted Sucessfull</b></p><br>"""
-    msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
-    msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
-    msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    msg="""<p>Project and Task Report Submitted Sucessfully by <b> {0}</b>""".format(doc.get('employee_name') or '-')
+    msg+="""<b>.<br>"""
+    msg+="""
+    <table style="line-height: 1em;width: 100%;" border="1" cellpadding="2" cellspacing="2">
+    <thead>
+        <tr>
+            <th class="text-center" style="width:25%; font-size:14px;">Project and Task Report No.</th>
+            <th class="text-center" style="width:25%; font-size:14px;">Week Start Date</th>
+            <th class="text-center" style="width:25%; font-size:14px;">Total Week Hours</th>
+            <th class="text-center" style="width:25%; font-size:14px;">Total Hours Worked</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center">{0}</td>""".format(doc.get('name'))
+    msg+="""<td class="text-center">{0}</td>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+="""<td class="text-center">40</td>"""
+    msg+="""<td class="text-center">{0}</td>""".format(doc.get('total'))
+    msg+="""</tr>
+    </tbody>
+    </table>"""
     recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"email")
     send_mail(recipients,'Project and Task Report',msg)
 
+#approver on submit
 def project_and_task(doc):
-    msg="""<p><b>Project and Task Report is Submitted Sucessfull</b></p><br>"""
-    msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
-    msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
-    msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    # msg="""<p><b>Project and Task Report is Submitted Sucessfully</b></p><br>"""
+    # msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
+    # msg+="""<b>Date:</b>  {0}<br>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    # msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
+    # recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"approver")
+    # send_mail(recipients,'Project and Task Report',msg)
+    msg="""<p>Project and Task Report Submitted Sucessfully by <b> {0}</b>""".format(doc.get('employee_name') or '-')
+    msg+="""<b>.<br>"""
+    msg+="""
+    <table style="line-height: 1em;width: 100%;" border="1" cellpadding="2" cellspacing="2">
+    <thead>
+        <tr>
+            <th class="text-center" style="width:25%; font-size:14px;">Project and Task Report No.</th>
+            <th class="text-center" style="width:25%; font-size:14px;">Week Start Date</th>
+            <th class="text-center" style="width:25%; font-size:14px;">Total Week Hours</th>
+            <th class="text-center" style="width:25%; font-size:14px;">Total Hours Worked</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="text-center">{0}</td>""".format(doc.get('name'))
+    msg+="""<td class="text-center">{0}</td>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+="""<td class="text-center">40</td>"""
+    msg+="""<td class="text-center">{0}</td>""".format(doc.get('total'))
+    msg+="""</tr>
+    </tbody>
+    </table>"""
     recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"approver")
     send_mail(recipients,'Project and Task Report',msg)
 
 
+#employee on cancel
 def project_task_cancelled(doc):
     msg="""<p><b>Project and Task Report is Cancelled</b></p><br>"""
     msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
@@ -99,7 +142,8 @@ def project_task_cancelled(doc):
     msg+="""<b>Employee Name:</b>  {0}<br>""".format(doc.get('employee_name') or '-')
     recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"email")
     send_mail(recipients,'Project and Task Report',msg)
-    
+
+#approver on cancel    
 def project_and_task_cancelled(doc):
     msg="""<p><b>Project and Task Report is Cancelled</b></p><br>"""
     msg+="""<b>Project and Task Report No.:</b>  {0}<br>""".format(doc.get('name'))
