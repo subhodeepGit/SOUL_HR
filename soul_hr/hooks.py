@@ -114,23 +114,30 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"soul_hr.tasks.all"
-# 	],
-# 	"daily": [
-# 		"soul_hr.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"soul_hr.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"soul_hr.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"soul_hr.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+
+	"cron": {
+		"00 17 * * 1": [
+		"soul_hr.tasks.cron"
+		]	
+	},
+
+	"all": [
+		"soul_hr.tasks.all"
+	],
+	"daily": [
+		"soul_hr.tasks.daily"
+	],
+	"hourly": [
+		"soul_hr.tasks.hourly"
+	],
+	"weekly": [
+		"soul_hr.tasks.weekly"
+	],
+	"monthly": [
+		"soul_hr.tasks.monthly"
+	]
+}
 
 # Testing
 # -------
