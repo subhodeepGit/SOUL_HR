@@ -203,7 +203,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-08-25 16:02:57.116691",
+ "modified": "2022-08-31 16:47:13.244499",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "SOUL HR",
@@ -245,12 +245,6 @@
    "doc_view": "List",
    "label": "HR Email Settings",
    "link_to": "HR Email Settings",
-   "type": "DocType"
-  },
-  {
-   "doc_view": "List",
-   "label": "Attendance",
-   "link_to": "Attendance",
    "type": "DocType"
   }
  ]
