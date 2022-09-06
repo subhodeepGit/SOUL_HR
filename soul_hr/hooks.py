@@ -87,9 +87,10 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	# "ToDo": "custom_app.overrides.CustomToDo"
+	"Leave Allocation": "soul_hr.soul_hr.doctype.leave_allocation.LeaveAllocation",
+}
 
 # Document Events
 # ---------------
@@ -147,9 +148,10 @@ scheduler_events = {
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "soul_hr.event.get_events"
-# }
+override_whitelisted_methods = {
+	# "frappe.desk.doctype.event.event.get_events": "soul_hr.event.get_events"
+	"erpnext.hr.doctype.leave_allocation.get_carry_forwarded_leaves": "soul_hr.soul_hr.doctype.leave_allocation.get_carry_forwarded_leaves",
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
