@@ -13,7 +13,7 @@ class ProjectandTasksReport(Document):
 	def validate(self):
 		self.calculate_totals()
 		# self.validate_years()
-		self.validate_dates()
+		# self.validate_dates()
 		duplicate_row_validation(self, "estimation", ['project','tasks'])
 	def on_submit(self):
 		self.calculate_total()
@@ -127,8 +127,8 @@ class ProjectandTasksReport(Document):
 			else:
 				b=b+1
 				a=a+", "+t	
-		if len_of_list !=0:
-			frappe.throw("Yor have worked less than 1 hrs on "+a)	
+		# if len_of_list !=0:
+		# 	frappe.throw("Yor have worked less than 1 hrs on "+a)	
 
 		self.saturday=sat
 		self.sunday=sun
@@ -197,19 +197,20 @@ def duplicate_row_validation(doc,table_field_name,comapre_fields):
 ################################################
 @frappe.whitelist()
 def share_doc_with_approver(doc, user):
-	if not frappe.has_permission(doc=doc, ptype="submit", user=user):
-		frappe.share.add(doc.doctype, doc.name, user, submit=1,
-			flags={"ignore_share_permission": True})
+	print("\n\n\n\n\n111",user)
+	# if not frappe.has_permission(doc=doc, ptype="submit", user=user):
+	print("\n\n\n\n\n1221",doc)
+	frappe.share.add(doc.doctype, doc.name, user, submit=1,
+		flags={"ignore_share_permission": True})
 
-		frappe.msgprint(("Shared with the approver {0}").format(
-			user, frappe.bold("submit"), alert=True))
+	frappe.msgprint(("Shared with the approver {0}").format(
+		user, frappe.bold("submit"), alert=True))
 		
 	doc_before_save = doc.get_doc_before_save()
 	if doc_before_save:
+		print("\n\n\n\n\n1331")
 		approvers = {
 			"Leave Application": "leave_approver",
 			"Expense Claim": "expense_approver",
 			"Shift Request": "approver"
 		}
-
-		approver = approvers.get(doc.doctype)

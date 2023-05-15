@@ -208,17 +208,7 @@
    "print_hide": 1,
    "read_only": 1
   },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "ignore_user_permissions": 1,
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Project and Tasks Report",
-   "print_hide": 1,
-   "read_only": 1
-  },
+
   {
    "fieldname": "section_break_29",
    "fieldtype": "Section Break",
@@ -229,7 +219,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-08-23 12:21:34.397022",
+ "modified": "2023-05-15 15:17:40.031015",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Project and Tasks Report",
