@@ -100,6 +100,7 @@ def project_task(doc):
     </table>"""
     recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"email")
     send_mail(recipients,'Project and Task Report',msg)
+    frappe.msgprint("Email sent to employee: %s"%(recipients))
 
 #approver on submit
 def project_and_task(doc):
@@ -132,6 +133,7 @@ def project_and_task(doc):
     </table>"""
     recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"approver")
     send_mail(recipients,'Project and Task Report',msg)
+    frappe.msgprint("Email sent to approver: %s"%(recipients))
 
 
 #employee on cancel

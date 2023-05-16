@@ -12,6 +12,8 @@ from soul_hr.soul_hr.notification.custom_notification import project_task, proje
 class ProjectandTasksReport(Document):
 	def validate(self):
 		self.calculate_totals()
+		# project_task(self)
+		# project_and_task(self)
 		# self.validate_years()
 		# self.validate_dates()
 		# duplicate_row_validation(self, "estimation", ['project','tasks'])
