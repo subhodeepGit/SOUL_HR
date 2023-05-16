@@ -135,6 +135,13 @@ def project_and_task(doc):
     send_mail(recipients,'Project and Task Report',msg)
     frappe.msgprint("Email sent to approver: %s"%(recipients))
 
+def project_and_task_approve_reject(doc):
+    msg="""<p>Project and Task Report for the week starting on <b> {0}</b>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
+    msg+=""" has been <b> {0}</b>.""".format(doc.get('workflow_state') or '-')
+    recipients = frappe.db.get_value("Project and Tasks Report",doc.get('name'),"email")
+    send_mail(recipients,'Project and Task Report',msg)
+    frappe.msgprint("Email sent to employee: %s"%(recipients))
+
 
 #employee on cancel
 def project_task_cancelled(doc):

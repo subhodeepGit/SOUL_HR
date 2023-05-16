@@ -6,22 +6,27 @@ from frappe.model.db_query import get_date_range
 from frappe.model.document import Document
 from frappe.utils import flt
 from frappe.utils.data import getdate
-from soul_hr.soul_hr.notification.custom_notification import project_task, project_and_task, project_task_cancelled, project_and_task_cancelled
+from soul_hr.soul_hr.notification.custom_notification import project_task, project_and_task, project_task_cancelled, project_and_task_cancelled,project_and_task_approve_reject
 
 
 class ProjectandTasksReport(Document):
 	def validate(self):
 		self.calculate_totals()
-		# project_task(self)
-		# project_and_task(self)
+		if self.workflow_state == "Sent for Approval":
+			project_task(self)
+			project_and_task(self)
 		# self.validate_years()
 		# self.validate_dates()
 		# duplicate_row_validation(self, "estimation", ['project','tasks'])
 	def on_submit(self):
+		print("\n\n\n\n\n\n\n")
+		print(self.workflow_state)
+		if self.workflow_state == "Approved" or "Rejected":
+			project_and_task_approve_reject(self)
 		self.calculate_total()
 		share_doc_with_approver(self, self.approver)
-		project_task(self)
-		project_and_task(self)
+		# project_task(self)
+		# project_and_task(self)
 	def on_cancel(self):
 		project_task_cancelled(self)
 		project_and_task_cancelled(self)
@@ -210,7 +215,7 @@ def share_doc_with_approver(doc, user):
 		
 	doc_before_save = doc.get_doc_before_save()
 	if doc_before_save:
-		print("\n\n\n\n\n1331")
+		# print("\n\n\n\n\n1331")
 		approvers = {
 			"Leave Application": "leave_approver",
 			"Expense Claim": "expense_approver",
