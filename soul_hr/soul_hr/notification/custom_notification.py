@@ -135,6 +135,7 @@ def project_and_task(doc):
     send_mail(recipients,'Project and Task Report',msg)
     frappe.msgprint("Email sent to approver: %s"%(recipients))
 
+#employee on approval/rejection
 def project_and_task_approve_reject(doc):
     msg="""<p>Project and Task Report for the week starting on <b> {0}</b>""".format(format_date(doc.get('report_for_week_starting'), 'dd/mm/yyyy'))
     msg+=""" has been <b> {0}</b>.""".format(doc.get('workflow_state') or '-')
