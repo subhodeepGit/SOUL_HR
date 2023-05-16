@@ -14,7 +14,7 @@ class ProjectandTasksReport(Document):
 		self.calculate_totals()
 		# self.validate_years()
 		# self.validate_dates()
-		duplicate_row_validation(self, "estimation", ['project','tasks'])
+		# duplicate_row_validation(self, "estimation", ['project','tasks'])
 	def on_submit(self):
 		self.calculate_total()
 		share_doc_with_approver(self, self.approver)
@@ -154,19 +154,19 @@ def get_employees(user=None):
 		p = frappe.db.get_all("Employee")
 	return p
 
-def duplicate_row_validation(doc,table_field_name,comapre_fields):
-	print("ok")
-	row_names=[]
-	for row in doc.get(table_field_name):
-		row_names.append(row.name)
+# def duplicate_row_validation(doc,table_field_name,comapre_fields):
+# 	print("ok")
+# 	row_names=[]
+# 	for row in doc.get(table_field_name):
+# 		row_names.append(row.name)
 
-	for row in doc.get(table_field_name):
-		filters={"parent":row.parent,"idx":("!=",row.idx)}
-		for field in comapre_fields:
-			filters[field]=row.get(field)
-		for duplicate in frappe.get_all(row.doctype,filters,['idx','name']):
-			if duplicate.name in row_names:
-				frappe.throw("#Row {0} Duplicate values in <b>{1}</b> Not Allowed".format(duplicate.idx, table_field_name))
+# 	for row in doc.get(table_field_name):
+# 		filters={"parent":row.parent,"idx":("!=",row.idx)}
+# 		for field in comapre_fields:
+# 			filters[field]=row.get(field)
+# 		for duplicate in frappe.get_all(row.doctype,filters,['idx','name']):
+# 			if duplicate.name in row_names:
+# 				frappe.throw("#Row {0} Duplicate values in <b>{1}</b> Not Allowed".format(duplicate.idx, table_field_name))
 # @frappe.whitelist()
 
 # def before_save(self):
@@ -197,9 +197,9 @@ def duplicate_row_validation(doc,table_field_name,comapre_fields):
 ################################################
 @frappe.whitelist()
 def share_doc_with_approver(doc, user):
-	print("\n\n\n\n\n111",user)
+	# print("\n\n\n\n\n111",user)
 	# if not frappe.has_permission(doc=doc, ptype="submit", user=user):
-	print("\n\n\n\n\n1221",doc)
+	# print("\n\n\n\n\n1221",doc)
 	frappe.share.add(doc.doctype, doc.name, user, submit=1,
 		flags={"ignore_share_permission": True})
 
