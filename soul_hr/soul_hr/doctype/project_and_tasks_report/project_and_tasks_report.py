@@ -15,6 +15,7 @@ class ProjectandTasksReport(Document):
 		if self.workflow_state == "Sent for Approval":
 			project_task(self)
 			project_and_task(self)
+			share_doc_with_approver(self, self.approver)
 		# self.validate_years()
 		# self.validate_dates()
 		# duplicate_row_validation(self, "estimation", ['project','tasks'])
@@ -24,7 +25,7 @@ class ProjectandTasksReport(Document):
 		if self.workflow_state == "Approved" or "Rejected":
 			project_and_task_approve_reject(self)
 		self.calculate_total()
-		share_doc_with_approver(self, self.approver)
+		# share_doc_with_approver(self, self.approver)
 		# project_task(self)
 		# project_and_task(self)
 	def on_cancel(self):
