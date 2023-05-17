@@ -20,8 +20,6 @@ class ProjectandTasksReport(Document):
 		# self.validate_dates()
 		# duplicate_row_validation(self, "estimation", ['project','tasks'])
 	def on_submit(self):
-		print("\n\n\n\n\n\n\n")
-		print(self.workflow_state)
 		if self.workflow_state == "Approved" or "Rejected":
 			project_and_task_approve_reject(self)
 		self.calculate_total()
