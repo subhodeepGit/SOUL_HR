@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "SOUL",
- "modified": "2023-06-01 12:03:35.773858",
+ "modified": "2023-06-13 12:41:53.128146",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Employee wise Project and Task Report",
@@ -23,6 +23,9 @@
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Projects Manager"
   }
  ]
 }
