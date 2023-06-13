@@ -1,5 +1,5 @@
 {
- "add_total_row": 0,
+ "add_total_row": 1,
  "columns": [],
  "creation": "2023-05-30 11:47:21.202114",
  "disable_prepared_report": 0,
@@ -10,7 +10,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letter_head": "SOUL",
- "modified": "2023-05-30 12:14:07.585329",
+ "modified": "2023-06-01 12:03:35.773858",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "Employee wise Project and Task Report",
