@@ -84,13 +84,13 @@ def get_columns():
             "label": _("Project"),
             "fieldname": "project",
             "fieldtype": "Data",
-            "width":120
+            "width":150
         },
         {
             "label": _("Project Name"),
             "fieldname": "project_name",
             "fieldtype": "Data",
-            "width":150
+            "width":160
         },
         {
             "label": _("Task"),
@@ -102,13 +102,13 @@ def get_columns():
             "label": _("Task Name"),
             "fieldname": "task_name",
             "fieldtype": "Data",
-            "width":150
+            "width":160
         },
         {
             "label": _("Total Hours"),
             "fieldname": "total",
             "fieldtype": "Data",
-            "width":100
+            "width":180
         },        # {
         #     "label": _("Task Description"),
         #     "fieldname": "task_description",
