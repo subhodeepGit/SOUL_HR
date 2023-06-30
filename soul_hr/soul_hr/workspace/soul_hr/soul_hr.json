@@ -219,9 +219,18 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Task Description Employee cum Project and Task wise Report",
+   "link_to": "Employee wise Project and Task Report with Task Description",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-06-13 12:48:07.605582",
+ "modified": "2023-06-22 18:27:27.414867",
  "modified_by": "Administrator",
  "module": "Soul Hr",
  "name": "SOUL HR",
