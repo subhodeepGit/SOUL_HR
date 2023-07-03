@@ -203,16 +203,14 @@ after_migrate = [
 
 # fixtures = [
 # 	{"dt": "Custom DocPerm", "filters": [
-# 		[
-# 			"parent", "not in", [
-# 				"DocType"
-# 			]
-# 		]
+# 		["parent", "not in", ["DocType"]],
+#         ["role", "=", "HR Manager"],
+#         ["parent", "in", ["Employee Onboarding Template","Employee Separation Template","Employee Skill Map","Employee Onboarding", "Employee Separation"]]
 # 	]},
-#     {"dt": "Role"},
-#     {"dt": "Role Profile"},
-#     {"dt": "Module Profile"}
-# 	{"dt": "Workflow","filters": [
-# 		["name", "like", "project v1"]
-# 	]}
+    # {"dt": "Role"},
+    # {"dt": "Role Profile"},
+    # {"dt": "Module Profile"}
+	# {"dt": "Workflow","filters": [
+	# 	["name", "like", "project v1"]
+	# ]}
 # ]
