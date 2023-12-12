@@ -908,12 +908,6 @@
     "parenttype": "Module Profile"
    },
    {
-    "module": "Payroll",
-    "parent": "HR Manager",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
     "module": "Communication",
     "parent": "HR Manager",
     "parentfield": "block_modules",
@@ -1024,7 +1018,7 @@
   ],
   "docstatus": 0,
   "doctype": "Module Profile",
-  "modified": "2022-08-11 18:15:15.905639",
+  "modified": "2023-12-12 11:26:39.300530",
   "module_profile_name": "HR Manager",
   "name": "HR Manager",
   "parent": null,
