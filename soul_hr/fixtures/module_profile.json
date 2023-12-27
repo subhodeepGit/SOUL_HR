@@ -503,7 +503,7 @@
   "parentfield": null,
   "parenttype": null
  },
- {
+  {
   "block_modules": [
    {
     "module": "Selling",
@@ -525,12 +525,6 @@
    },
    {
     "module": "Automation",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Data Migration",
     "parent": "Employee",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
@@ -590,18 +584,6 @@
     "parenttype": "Module Profile"
    },
    {
-    "module": "Restaurant",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Hotels",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
     "module": "Quality Management",
     "parent": "Employee",
     "parentfield": "block_modules",
@@ -609,18 +591,6 @@
    },
    {
     "module": "Loan Management",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Agriculture",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Non Profit",
     "parent": "Employee",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
@@ -638,37 +608,13 @@
     "parenttype": "Module Profile"
    },
    {
-    "module": "Education",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Payroll",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
     "module": "Communication",
     "parent": "Employee",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
    },
    {
-    "module": "Hub Node",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
     "module": "ERPNext Integrations",
-    "parent": "Employee",
-    "parentfield": "block_modules",
-    "parenttype": "Module Profile"
-   },
-   {
-    "module": "Healthcare",
     "parent": "Employee",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
@@ -756,16 +702,19 @@
     "parent": "Employee",
     "parentfield": "block_modules",
     "parenttype": "Module Profile"
+   },
+   {
+    "module": "Subcontracting",
+    "parent": "Employee",
+    "parentfield": "block_modules",
+    "parenttype": "Module Profile"
    }
   ],
   "docstatus": 0,
   "doctype": "Module Profile",
-  "modified": "2022-03-22 15:20:26.235675",
+  "modified": "2023-12-26 14:52:13.477312",
   "module_profile_name": "Employee",
-  "name": "Employee",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null
+  "name": "Employee"
  },
  {
   "block_modules": [
