@@ -32,7 +32,8 @@ app_license = "MIT"
 
 # include js in doctype views
 doctype_js = {"User" : "public/js/user.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {"Employee" : "public/employee_list.js"}
+# /home/erpnext/frappe-bench/apps/soul_hr/soul_hr/public/employee_list.js
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
